@@ -40,7 +40,8 @@
                         <div class="dropdown-menu custom-navbar shadow" aria-labelledby="dropdownId">
                             <a class="dropdown-item drophovercustom" href="listado-producto-vacio.html">Productos</a>
                             <a class="dropdown-item drophovercustom" href="./pedidos/envios.html">Pedidos</a>
-                            <a class="dropdown-item drophovercustom" href="./clientes/clientes-no-login-sinpro.html">Clientes</a>
+                            <a class="dropdown-item drophovercustom"
+                                href="./clientes/clientes-no-login-sinpro.html">Clientes</a>
                         </div>
                     </li>
                 </ul>
@@ -51,28 +52,32 @@
     <div class="container">
         <div class="mt-5">
 
-            <form style="max-width:500px;margin:auto">
+            <form action="inicio-usuario.html" method="post" style="max-width:500px;margin:auto">
                 <h2>Login</h2>
                 <div class="input-container">
                     <i class="bi bi-person-circle icon"></i>
-                    <input class="input-field " type="text" placeholder="Usuario" name="usrnm">
+                    <label for="nom1" class="form-label"></label>
+                    <input type="text" required class="form-control" id="nom1" placeholder="Ingrese nombre" name="nom1">
                 </div>
 
                 <div class="input-container">
                     <i class="bi bi-file-lock2 icon"></i>
-                    <input class="input-field " type="password" placeholder="Contraseña" name="psw">
+                    <label for="pwd1" class="form-label"></label>
+                    <input type="password" required class="form-control" id="pwd1" placeholder="Ingrese contraseña"
+                        name="pswd1">
                 </div>
 
-                <a type="submit" class="btn" role="button" href="inicio-usuario.html">Iniciar Sesión</a>
+                <button type="submit" class="btn btn-primary" onclick="alerta()">Iniciar sesion</button>
             </form>
 
             <div class="text-center mt-3">
                 <a href="cambio-contraseña.html" class="nodecolink">¿Olvidaste tu contraseña?</a>
                 <br>
-                <a href="crear-cuenta.html" class="nodecolink">Crear una cuenta</a>            
+                <a href="crear-cuenta.html" class="nodecolink">Crear una cuenta</a>
             </div>
         </div>
 
     </div>
 </body>
+
 </html>
