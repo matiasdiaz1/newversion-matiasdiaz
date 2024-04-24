@@ -54,34 +54,51 @@
 
             <form action="inicio-usuario.html" method="post" style="max-width:500px;margin:auto">
                 <h2>Crear cuenta</h2>
+
+                <div class="input-container">
+                    <i class="bi bi-person-circle icon"></i>
+                    <input type="text" id="rut" name="rut" oninput="checkRut(this)" placeholder="Ingrese RUT" required>
+                    <button type="submit">Validar RUT</button>
+                </div>
+
+
                 <div class="input-container">
                     <i class="bi bi-person-circle icon"></i>
                     <label for="nom1" class="form-label"></label>
-                    <input type="text" required class="form-control" id="nom1" placeholder="Ingrese nombre" name="nom1">
+                    <input type="text" required class="form-control" id="nom1" placeholder="Ingrese nombre" name="nom1"
+                        pattern="[a-zA-Z ]{2,254}" maxlength="25" required>
+                </div>
+
+                <div class="input-container">
+                    <i class="bi bi-person-circle icon"></i>
+                    <label for="nom1" class="form-label"></label>
+                    <input type="text" class="form-control" id="ape1" placeholder="Ingrese apellido" name="ape1"
+                        pattern="[a-zA-Z ]{2,254}" maxlength="20" required>
                 </div>
 
                 <div class="input-container">
                     <i class="bi bi-envelope icon"></i>
                     <label for="email" class="form-label"></label>
-                    <input type="email" required class="form-control" id="email" placeholder="Ingrese email"
-                        name="email">
+                    <input type="email" class="form-control" id="email" placeholder="Ingrese email" name="email"
+                        pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,5}"
+                        required>
                 </div>
 
                 <div class="input-container">
                     <i class="bi bi-file-lock2 icon"></i>
                     <label for="pwd1" class="form-label"></label>
-                    <input type="password" required class="form-control" id="pwd1" placeholder="Ingrese contraseña"
-                        name="pswd1">
+                    <input type="password" class="form-control" id="pwd1" placeholder="Ingrese contraseña" name="pswd1"
+                        minlength="6" required>
                 </div>
 
                 <div class="input-container">
                     <i class="bi bi-file-lock2 icon"></i>
                     <label for="pwd2" class="form-label"></label>
-                    <input type="password" required class="form-control" id="pwd2" placeholder="Confirmar contraseña"
-                        name="pswd2">
+                    <input type="password" class="form-control" id="pwd2" placeholder="Confirmar contraseña"
+                        name="pswd2" minlength="6" required>
                 </div>
 
-                <button type="submit" class="btn btn-primary" onclick="alerta()">Continuar</button>
+                <button type="submit" class="btn btn-primary">Continuar</button>
             </form>
 
             <div class="text-center mt-3">
@@ -92,6 +109,8 @@
         </div>
 
     </div>
+
+    <script src="javascrippps/mijava.js"></script>
 </body>
 
 </html>
