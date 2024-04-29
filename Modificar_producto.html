@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Producto</title>
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+
+<body>
+    <div>
+        <h1>Producto</h1>
+        <img src="https://th.bing.com/th/id/R.6e2e17f6a8fc1338b708297a5c01faeb?rik=OqA4jdQkqzUgqw&pid=ImgRaw&r=0"
+            alt="Producto" class="center-img">
+        <p>Precio: <span id="precio">$20</span></p>
+        <label for="nuevoPrecio">Nuevo Precio:</label>
+        <input type="text" id="nuevoPrecio" placeholder="Ingrese el nuevo precio">
+        <button onclick="modificarPrecio()">Modificar Precio</button>
+    </div>
+    <script>
+        function modificarPrecio() {
+            var nuevoPrecio = document.getElementById("nuevoPrecio").value;
+            // Validar si el nuevo precio es un número
+            if (!isNaN(parseFloat(nuevoPrecio)) && isFinite(nuevoPrecio)) {
+                document.getElementById("precio").innerText = "$" + nuevoPrecio;
+            } else {
+                alert("Por favor ingrese un valor numérico válido.");
+            }
+        }
+    </script>
+    
+
+
+
+
+</body>
+
+</html>
