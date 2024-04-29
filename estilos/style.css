@@ -68,9 +68,10 @@
 }
 
     .center-img {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 50%; /* Ajusta el ancho de la imagen según tus necesidades */
-        height: auto;
+        
+        margin-left: center;
+        justify-content: center;
+        align-items: center;
+        max-width: 20%; /* Ajusta el ancho de la imagen según tus necesidades */
+        height: 50vh;
 }
