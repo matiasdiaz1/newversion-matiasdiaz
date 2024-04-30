@@ -10,14 +10,16 @@
 
 <body>
     <div>
-        <h1>Producto</h1>
-        <li class="nav-item">
-            <a class="nav-link" href="admin-productos.html">Atras</a>
-        </li>
+        <h1 class="pro">Producto</h1>
+        <div class="primer">
+            <li class="nav-item">
+                <a class="nav-link" href="admin-productos.html">Atras</a>
+            </li>
+        </div>
 
         <img id="imagen"
             src="https://equipoparagimnasioferbel.com/wp-content/uploads/2019/07/caminadoras-life-fitness-95t-touch-D_NQ_NP_187325-MLM25422199092_032017-F.jpg"
-            alt="Imagen actual">
+            alt="Imagen actual" class="imagen">
         <input type="file" id="fileInput" accept="image/*">
 
         <script>
@@ -33,51 +35,61 @@
                 reader.readAsDataURL(file);
             });
         </script>>
-        <p>Precio: <span id="precio">$20</span></p>
+        <h2>Precio:</h2>
+        <h3><span id="precio">$20</span></h3>
         <input type="text" id="nuevoPrecio" placeholder="Ingrese el nuevo precio">
         <button onclick="modificarPrecio()">Modificar Precio</button>
 
 
-        <p><label for="nuevoproducto">Nuevo Producto:</label></p>
-        <p><label for="Descripción">
-                <h1>Descripción: </h1>
-            </label></p>
 
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Cambiar Descripción</title>
-        </head>
+        <div>
 
-        <body>
+            <div class="descrip">
 
-            <p id="descripcion">Esta es la descripción actual del producto.</p>
-            <button onclick="cambiarDescripcion()">Cambiar Descripción</button>
+                <p><label for="Descripción">
+                        <h1>Descripción: </h1>
+                    </label></p>
+                    </div>
 
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Cambiar Descripción</title>
+                </head>
+
+                <body>
+
+                    <p id="descripcion">Había una vez 3 cerditos que eran hermanos y vivían en lo más profundo del
+                        bosque. Siempre habían vivido felices y sin preocupaciones en aquel lugar, pero ahora se
+                        encontraban temerosos de un lobo que merodeaba la zona. Fue así como decidieron que lo mejor era
+                        <br>
+                    </p>
+                    <button onclick="cambiarDescripcion()">Cambiar Descripción</button>
+
+                    <script>
+                        function cambiarDescripcion() {
+                            var nuevaDescripcion = prompt("Introduce la nueva descripción:");
+                            if (nuevaDescripcion !== null) {
+                                document.getElementById("descripcion").innerText = nuevaDescripcion;
+                            }
+                        }
+                    </script>
+
+
+            </div>
             <script>
-                function cambiarDescripcion() {
-                    var nuevaDescripcion = prompt("Introduce la nueva descripción:");
-                    if (nuevaDescripcion !== null) {
-                        document.getElementById("descripcion").innerText = nuevaDescripcion;
+                function modificarPrecio() {
+                    var nuevoPrecio = document.getElementById("nuevoPrecio").value;
+                    // Validar si el nuevo precio es un número
+                    if (!isNaN(parseFloat(nuevoPrecio)) && isFinite(nuevoPrecio)) {
+                        document.getElementById("precio").innerText = "$" + nuevoPrecio;
+                    } else {
+                        alert("Por favor ingrese un valor numérico válido.");
                     }
                 }
             </script>
 
+        </div>
 
-    </div>
-    <script>
-        function modificarPrecio() {
-            var nuevoPrecio = document.getElementById("nuevoPrecio").value;
-            // Validar si el nuevo precio es un número
-            if (!isNaN(parseFloat(nuevoPrecio)) && isFinite(nuevoPrecio)) {
-                document.getElementById("precio").innerText = "$" + nuevoPrecio;
-            } else {
-                alert("Por favor ingrese un valor numérico válido.");
-            }
-        }
-    </script>
-
-
-    
 
 
 

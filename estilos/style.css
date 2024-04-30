@@ -67,4 +67,36 @@
     font-size: 15px;
 }
 
-   
+.imagen{
+    display: block;
+  margin-left: 350px;
+  margin-right: auto;
+  max-width: 30%; /* Ajusta el ancho de la imagen según tus necesidades */
+  height: auto;
+
+}
+
+.descrip{
+    display: flex;
+  align-items: center; /* Alinea verticalmente los elementos */
+  margin-left: 900px;
+  position: relative;
+  position: absolute;
+  top: 320px; /* Ajusta la distancia desde la parte superior según tus necesidades */
+  left: 0;
+}
+
+
+
+.primer{
+    display: inline-block;
+    padding: 8px 16px; /* Ajusta el padding según sea necesario */
+    border: 2px solid #ccc; /* Establece un borde */
+    border-radius: 5px; /* Hace que los bordes sean redondeados */
+    background-color: hwb(0 94% 6%); /* Color de fondo */
+    cursor: pointer; 
+    }
+    .pro{
+        align-items:center
+    }
+
