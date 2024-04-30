@@ -11,47 +11,56 @@
 <body>
     <div>
         <h1>Producto</h1>
-            <img id="imagen" src="https://equipoparagimnasioferbel.com/wp-content/uploads/2019/07/caminadoras-life-fitness-95t-touch-D_NQ_NP_187325-MLM25422199092_032017-F.jpg" alt="Imagen actual">
-  <input type="file" id="fileInput" accept="image/*">
-  
-  <script>
-    document.getElementById('fileInput').addEventListener('change', function(event) {
-      var file = event.target.files[0];
-      var reader = new FileReader();
-      
-      reader.onload = function(event) {
-        var img = document.getElementById('imagen');
-        img.src = event.target.result;
-      };
-      
-      reader.readAsDataURL(file);
-    });
-  </script>>
+        <li class="nav-item">
+            <a class="nav-link" href="admin-productos.html">Atras</a>
+        </li>
+
+        <img id="imagen"
+            src="https://equipoparagimnasioferbel.com/wp-content/uploads/2019/07/caminadoras-life-fitness-95t-touch-D_NQ_NP_187325-MLM25422199092_032017-F.jpg"
+            alt="Imagen actual">
+        <input type="file" id="fileInput" accept="image/*">
+
+        <script>
+            document.getElementById('fileInput').addEventListener('change', function (event) {
+                var file = event.target.files[0];
+                var reader = new FileReader();
+
+                reader.onload = function (event) {
+                    var img = document.getElementById('imagen');
+                    img.src = event.target.result;
+                };
+
+                reader.readAsDataURL(file);
+            });
+        </script>>
         <p>Precio: <span id="precio">$20</span></p>
         <input type="text" id="nuevoPrecio" placeholder="Ingrese el nuevo precio">
         <button onclick="modificarPrecio()">Modificar Precio</button>
-        
+
 
         <p><label for="nuevoproducto">Nuevo Producto:</label></p>
-        <p><label for="Descripción"><h1>Descripción: </h1></label></p>
+        <p><label for="Descripción">
+                <h1>Descripción: </h1>
+            </label></p>
 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Cambiar Descripción</title>
-      </head>
-      <body>
-        
-        <p id="descripcion">Esta es la descripción actual del producto.</p>
-        <button onclick="cambiarDescripcion()">Cambiar Descripción</button>
-        
-        <script>
-          function cambiarDescripcion() {
-            var nuevaDescripcion = prompt("Introduce la nueva descripción:");
-            if (nuevaDescripcion !== null) {
-              document.getElementById("descripcion").innerText = nuevaDescripcion;
-            }
-          }
-        </script>
+        </head>
+
+        <body>
+
+            <p id="descripcion">Esta es la descripción actual del producto.</p>
+            <button onclick="cambiarDescripcion()">Cambiar Descripción</button>
+
+            <script>
+                function cambiarDescripcion() {
+                    var nuevaDescripcion = prompt("Introduce la nueva descripción:");
+                    if (nuevaDescripcion !== null) {
+                        document.getElementById("descripcion").innerText = nuevaDescripcion;
+                    }
+                }
+            </script>
 
 
     </div>
@@ -68,7 +77,7 @@
     </script>
 
 
-
+    
 
 
 
