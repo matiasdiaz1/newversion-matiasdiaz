@@ -33,7 +33,25 @@
         
 
         <p><label for="nuevoproducto">Nuevo Producto:</label></p>
-        <p><label for="Descripción">Descripción:</label></p>
+        <p><label for="Descripción"><h1>Descripción: </h1></label></p>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cambiar Descripción</title>
+      </head>
+      <body>
+        
+        <p id="descripcion">Esta es la descripción actual del producto.</p>
+        <button onclick="cambiarDescripcion()">Cambiar Descripción</button>
+        
+        <script>
+          function cambiarDescripcion() {
+            var nuevaDescripcion = prompt("Introduce la nueva descripción:");
+            if (nuevaDescripcion !== null) {
+              document.getElementById("descripcion").innerText = nuevaDescripcion;
+            }
+          }
+        </script>
 
 
     </div>
