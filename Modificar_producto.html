@@ -49,46 +49,47 @@
                 <p><label for="Descripción">
                         <h1>Descripción: </h1>
                     </label></p>
-                    </div>
+            </div>
 
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>Cambiar Descripción</title>
-                </head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Cambiar Descripción</title>
+            </head>
 
-                <body>
-
+            <body>
+                <div class="descrip2">
                     <p id="descripcion">Había una vez 3 cerditos que eran hermanos y vivían en lo más profundo del
                         bosque. Siempre habían vivido felices y sin preocupaciones en aquel lugar, pero ahora se
                         encontraban temerosos de un lobo que merodeaba la zona. Fue así como decidieron que lo mejor era
                         <br>
-                    </p>
-                    <button onclick="cambiarDescripcion()">Cambiar Descripción</button>
+                </div>
+                </p>
+                <button onclick="cambiarDescripcion()">Cambiar Descripción</button>
 
-                    <script>
-                        function cambiarDescripcion() {
-                            var nuevaDescripcion = prompt("Introduce la nueva descripción:");
-                            if (nuevaDescripcion !== null) {
-                                document.getElementById("descripcion").innerText = nuevaDescripcion;
-                            }
+                <script>
+                    function cambiarDescripcion() {
+                        var nuevaDescripcion = prompt("Introduce la nueva descripción:");
+                        if (nuevaDescripcion !== null) {
+                            document.getElementById("descripcion").innerText = nuevaDescripcion;
                         }
-                    </script>
-
-
-            </div>
-            <script>
-                function modificarPrecio() {
-                    var nuevoPrecio = document.getElementById("nuevoPrecio").value;
-                    // Validar si el nuevo precio es un número
-                    if (!isNaN(parseFloat(nuevoPrecio)) && isFinite(nuevoPrecio)) {
-                        document.getElementById("precio").innerText = "$" + nuevoPrecio;
-                    } else {
-                        alert("Por favor ingrese un valor numérico válido.");
                     }
-                }
-            </script>
+                </script>
+
 
         </div>
+        <script>
+            function modificarPrecio() {
+                var nuevoPrecio = document.getElementById("nuevoPrecio").value;
+                // Validar si el nuevo precio es un número
+                if (!isNaN(parseFloat(nuevoPrecio)) && isFinite(nuevoPrecio)) {
+                    document.getElementById("precio").innerText = "$" + nuevoPrecio;
+                } else {
+                    alert("Por favor ingrese un valor numérico válido.");
+                }
+            }
+        </script>
+
+    </div>
 
 
 
