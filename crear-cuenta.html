@@ -57,8 +57,7 @@
 
                 <div class="input-container">
                     <i class="bi bi-person-circle icon"></i>
-                    <input type="text" id="rut" name="rut" oninput="checkRut(this)" placeholder="Ingrese RUT" required>
-                    <button type="submit">Validar RUT</button>
+                    <input class="form-control" type="text" id="rut" name="rut" onblur="checkRut(this)" placeholder="Ingrese RUT" required>
                 </div>
 
 
@@ -79,7 +78,7 @@
                 <div class="input-container">
                     <i class="bi bi-envelope icon"></i>
                     <label for="email" class="form-label"></label>
-                    <input type="email" class="form-control" id="email" placeholder="Ingrese email" name="email"
+                    <input type="email" class="form-control" id="email" placeholder="Ingrese email (example@gmail.com)" name="email"
                         pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,5}"
                         required>
                 </div>
