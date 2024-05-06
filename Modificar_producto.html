@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="estilos/style.css">
     <link rel="stylesheet" href="style-login.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    
+
 </head>
 
 <body>
@@ -41,11 +41,13 @@
                         <div class="dropdown-menu custom-navbar shadow" aria-labelledby="dropdownId">
                             <a class="dropdown-item drophovercustom" href="listado-producto-vacio.html">Productos</a>
                             <a class="dropdown-item drophovercustom" href="./pedidos/envios.html">Pedidos</a>
-                            <a class="dropdown-item drophovercustom" href="./clientes/clientes-no-login-sinpro.html">Clientes</a>
+                            <a class="dropdown-item drophovercustom"
+                                href="./clientes/clientes-no-login-sinpro.html">Clientes</a>
                         </div>
                     </li>
                 </ul>
-                <span id="sesionlink"><a class="nav-link text-light sesiontext" href="login.html">Iniciar sesion</a></span>
+                <span id="sesionlink"><a class="nav-link text-light sesiontext" href="login.html">Iniciar
+                        sesion</a></span>
             </div>
         </div>
     </nav>
@@ -91,53 +93,55 @@
 
 
 
-        <div>
 
+
+        <div class="container">
             <div class="descrip">
+                <p>
+                    <span class="titulo">Descripción:</span>
+                    <textarea id="descripcion" class="descripcion-text" rows="4" cols="45"></textarea>
 
-                <p><label for="Descripción">
-                        <h1>Descripción: </h1>
-                    </label></p>
+                </p>
+            </div>
+        </div>
+
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cambiar Descripción</title>
+        </head>
+
+        <body>
+            <div class="descrip">
+                <p id="titulo">
+                    
+                </p>
             </div>
 
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Cambiar Descripción</title>
-            </head>
+            <button onclick="cambiarDescripcion()">Cambiar Descripción</button>
 
-            <body>
-                <div class="descrip2">
-                    <p id="descripcion">Había una vez 3 cerditos que eran hermanos y vivían en lo más profundo del
-                        bosque. Siempre habían vivido felices y sin preocupaciones en aquel lugar, pero ahora se
-                        encontraban temerosos de un lobo que merodeaba la zona. Fue así como decidieron que lo mejor
-                        <br>
-                    </p>
-                </div>
-
-                <button onclick="cambiarDescripcion()">Cambiar Descripción</button>
-
-                <script>
-                    function cambiarDescripcion() {
-                        var nuevaDescripcion = prompt("Introduce la nueva descripción:");
-                        if (nuevaDescripcion !== null) {
-                            document.getElementById("descripcion").innerText = nuevaDescripcion;
-                        }
+            <script>
+                function cambiarDescripcion() {
+                    var nuevaDescripcion = prompt("Introduce la nueva descripción:");
+                    if (nuevaDescripcion !== null) {
+                        document.getElementById("descripcion").innerText = nuevaDescripcion;
                     }
-                </script>
-
-
-        </div>
-        <script>
-            function modificarPrecio() {
-                var nuevoPrecio = document.getElementById("nuevoPrecio").value;
-                // Validar si el nuevo precio es un número
-                if (!isNaN(parseFloat(nuevoPrecio)) && isFinite(nuevoPrecio)) {
-                    document.getElementById("precio").innerText = "$" + nuevoPrecio;
-                } else {
-                    alert("Por favor ingrese un valor numérico válido.");
                 }
+            </script>
+
+
+    </div>
+    <script>
+        function modificarPrecio() {
+            var nuevoPrecio = document.getElementById("nuevoPrecio").value;
+            // Validar si el nuevo precio es un número
+            if (!isNaN(parseFloat(nuevoPrecio)) && isFinite(nuevoPrecio)) {
+                document.getElementById("precio").innerText = "$" + nuevoPrecio;
+            } else {
+                alert("Por favor ingrese un valor numérico válido.");
             }
-        </script>
+        }
+    </script>
 
     </div>
 

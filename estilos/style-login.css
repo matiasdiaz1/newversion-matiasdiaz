@@ -41,3 +41,19 @@
     .btn:hover {
         background-color: #333EFF20;
     }
+
+.titulo{
+    font-size: 1.2em; /* Tamaño del texto del título */
+    font-weight: bold; /* Negrita */
+    margin-bottom: 10px; /* Espacio inferior */
+}
+
+
+
+.descripcion-text {
+    width: 100%; /* Ancho completo */
+    padding: 5px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 5px; /* Bordes redondeados */
+    resize: vertical; /* Permitir redimensionamiento vertical */
+    }
