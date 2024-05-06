@@ -4,12 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login -GymBros</title>
+    <title>Admin - API </title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <script src="js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="estilos/style-login.css">
     <link rel="stylesheet" href="estilos/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="js_vali/jquery-3.7.1.min.js"></script>
 </head>
 
 <body>
@@ -49,36 +48,57 @@
             </div>
         </div>
     </nav>
+
     <div class="container">
-        <div class="mt-5">
-
-            <form action="inicio-usuario.html" method="post" style="max-width:500px;margin:auto">
-                <h2>Login</h2>
-                <div class="input-container">
-                    <i class="bi bi-person-circle icon"></i>
-                    <label for="nom1" class="form-label"></label>
-                    <input type="text" required class="form-control" id="nom1" placeholder="Ingrese nombre" name="nom1"
-                        pattern="[a-zA-Z ]{2,254}" maxlength="25" required>
-                </div>
-
-                <div class="input-container">
-                    <i class="bi bi-file-lock2 icon"></i>
-                    <label for="pwd1" class="form-label"></label>
-                    <input type="password" class="form-control" id="pwd1" placeholder="Ingrese contraseña" name="pswd1"
-                        minlength="6" required>
-                </div>
-
-                <button type="submit" class="btn btn-primary">Iniciar sesion</button>
-            </form>
-
-            <div class="text-center mt-3">
-                <a href="cambio-contraseña.html" class="nodecolink">¿Olvidaste tu contraseña?</a>
-                <br>
-                <a href="crear-cuenta.html" class="nodecolink">Crear una cuenta</a>
+        <div class="text-center pt-5 pb-3">
+            <div class="p-3 mb-2" style="background-color: #7241b4; color: white; border-color: #7241b4;">
+                <h1 class="display-4 font-weight-bold">Indicadores Económicos</h1>
             </div>
         </div>
 
+        <div class="row pt-3">
+            <div class="col-md-4 mb-3">
+                <div class="card text-white" style="background-color: #28a745;">
+                    <div class="card-body">
+                        <h5 class="card-title">Valor Dólar</h5>
+                        <p class="card-text">
+                            <span id="loader" class="spinner-border spinner-border-sm text-light" role="status"></span>
+                            <span class="textloader">Cargando...</span>
+                        </p>
+                        <p class="h3" id="dolar"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card text-white" style="background-color: #007bff;">
+                    <div class="card-body">
+                        <h5 class="card-title">Valor UF</h5>
+                        <p class="card-text">
+                            <span id="loaderuf" class="spinner-border spinner-border-sm text-light"
+                                role="status"></span>
+                            <span class="textloader">Cargando...</span>
+                        </p>
+                        <p class="h3" id="uf"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card text-white" style="background-color: #ff9800;">
+                    <div class="card-body">
+                        <h5 class="card-title">Valor Bitcoin</h5>
+                        <p class="card-text">
+                            <span id="loaderbtc" class="spinner-border spinner-border-sm text-light"
+                                role="status"></span>
+                            <span class="textloader">Cargando...</span>
+                        </p>
+                        <p class="h3" id="bitcoin"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <script src="js_vali/querys.js"></script>
 </body>
 
 </html>
