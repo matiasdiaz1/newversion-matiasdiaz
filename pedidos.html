@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <script src="js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="css/estiloetiquetas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>GymBros</title>
 </head>
+
 <body>
     <nav class="navbar navbar-expand-sm navbar-dark custom-navbar">
         <div class="container">
@@ -34,18 +38,162 @@
                         <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">Administración</a>
                         <div class="dropdown-menu custom-navbar shadow" aria-labelledby="dropdownId">
-                            <a class="dropdown-item drophovercustom" href="listado-producto-vacio.html">Productos</a>
-                            <a class="dropdown-item drophovercustom" href="./pedidos/envios.html">Pedidos</a>
-                            <a class="dropdown-item drophovercustom" href="./clientes/clientes-no-login-sinpro.html">Clientes</a>
+                            <a class="dropdown-item drophovercustom" href="admin-agregar-productos.html">Productos</a>
+                            <a class="dropdown-item drophovercustom" href="admin-modificar-productos.html">Modificar
+                                Productos</a>
+                            <a class="dropdown-item drophovercustom" href="admin-pedidos.html">Pedidos</a>
+                            <a class="dropdown-item drophovercustom" href="admin-agregar-clientes.html">Clientes</a>
+                            <a class="dropdown-item drophovercustom" href="monedas.html">API</a>
                         </div>
                     </li>
                 </ul>
-                <span id="sesionlink"><a class="nav-link text-light sesiontext" href="login.html">Iniciar sesion</a></span>
+                <span class="nav-item dropdown nav-link text-light sesiontext " >
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Usuario conectado</a>
+                    <div class="dropdown-menu custom-navbar shadow" aria-labelledby="dropdownId">
+                        <a class="dropdown-item drophovercustom" href="index.html">Desconectarse</a>
+                    </div>
+                </span> 
             </div>
         </div>
     </nav>
 
     <div class="container">
         <div class="mt-3">
-        <h1 class="h4">Tu carrito esta vacio.</h1>
-        
+            <h1 class="h4">Pedidos</h1>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID Pedido</th>
+                        <th>Imagen</th>
+                        <th>Producto</th>
+                        <th>Estado</th>
+                        <th>Detalles</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1587</td>
+                        <td><img src="img/BiciSpinning.jpg" alt="" height="50"></td>
+                        <td>Bicicleta Spinning</td>
+                        <td>
+                            <p class="preparacion"><i class="fa fa-hourglass-half" aria-hidden="true"></i>
+                                En preparación</p>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#modalDescripcion1234"
+                                style="background-color: #7241b4; color: white; border-color: #7241b4;">Ver
+                                Detalles</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+        <div class="modal fade" id="modalDescripcion1234" tabindex="-1" aria-labelledby="modalDescripcionLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalDescripcionLabel">Descripción del Pedido</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h6>Detalles del Pedido:</h6>
+                        <p><strong>ID Pedido:</strong> 1587</p>
+                        <p><strong>Fecha:</strong> 02/03/2024</p>
+                        <p><strong>Cliente:</strong> Pepo Pide</p>
+                        <p><strong>Producto:</strong> Bicicleta Spinning</p>
+                        <hr>
+                        <h6>Detalles del Envío:</h6>
+                        <p><strong>Cantidad:</strong> 3 bicicletas</p>
+                        <p><strong>Teléfono:</strong> +5696543210</p>
+                        <p><strong>RUT:</strong> 21.565.432-1</p>
+                        <hr>
+                        <h6>Detalles Adicionales:</h6>
+                        <p><strong>Dirección de Entrega:</strong> Calle Principal 123</p>
+                        <p><strong>Método de Pago:</strong> Tarjeta de Crédito</p>
+                        <p><strong>Fecha Estimada de Entrega:</strong> 10/03/2024</p>
+                        <p><strong>Valor del Producto:</strong> $100.000 CLP</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="mt-3">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>ID Pedido</th>
+                            <th>Imagen</th>
+                            <th>Producto</th>
+                            <th>Estado</th>
+                            <th>Detalles</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1587</td>
+                            <td><img src="img/BiciSpinning.jpg" alt="" height="50"></td>
+                            <td>Bicicleta Spinning</td>
+                            <td>
+                                <p class="preparacion"><i class="fa fa-hourglass-half" aria-hidden="true"></i>
+                                    En preparación</p>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#modalDescripcion1234"
+                                    style="background-color: #7241b4; color: white; border-color: #7241b4;">Ver
+                                    Detalles</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    
+    
+            <div class="modal fade" id="modalDescripcion1234" tabindex="-1" aria-labelledby="modalDescripcionLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalDescripcionLabel">Descripción del Pedido</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <h6>Detalles del Pedido:</h6>
+                            <p><strong>ID Pedido:</strong> 1587</p>
+                            <p><strong>Fecha:</strong> 02/03/2024</p>
+                            <p><strong>Cliente:</strong> Pepo Pide</p>
+                            <p><strong>Producto:</strong> Bicicleta Spinning</p>
+                            <hr>
+                            <h6>Detalles del Envío:</h6>
+                            <p><strong>Cantidad:</strong> 3 bicicletas</p>
+                            <p><strong>Teléfono:</strong> +5696543210</p>
+                            <p><strong>RUT:</strong> 21.565.432-1</p>
+                            <hr>
+                            <h6>Detalles Adicionales:</h6>
+                            <p><strong>Dirección de Entrega:</strong> Calle Principal 123</p>
+                            <p><strong>Método de Pago:</strong> Tarjeta de Crédito</p>
+                            <p><strong>Fecha Estimada de Entrega:</strong> 10/03/2024</p>
+                            <p><strong>Valor del Producto:</strong> $100.000 CLP</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+</body>
+
+</html>
